@@ -1,33 +1,30 @@
-# Rådman Fastighetsservice
+# Rådman Fastighetsservice – Website
 
-Website for a local property service business based in Dalarna.
+This repository contains the source code for the Rådman Fastighetsservice website.
 
-## 🌿 About
+## Overview
 
-This is the official website for **Rådman Fastighetsservice**, offering practical help for homeowners and property owners.
+A simple, fast, and responsive website built to present services and allow potential customers to get in contact.
 
-Services include:
+Focus areas:
 
-* Cleaning
-* Estate clearances (dödsbotömning)
-* Lawn mowing
-* Snow shoveling
-* General property maintenance
-
-The goal of this website is to present services clearly and make it easy for customers to get in touch.
+* Clean UI
+* Good mobile experience
+* Clear structure
+* Maintainable codebase
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 * Next.js
 * React
-* CSS Modules
 * TypeScript
+* CSS Modules
 
 ---
 
-## 📦 Getting Started
+## Getting Started
 
 Clone the repository:
 
@@ -42,47 +39,37 @@ Install dependencies:
 npm install
 ```
 
-Run development server:
+Start development server:
 
 ```bash
 npm run dev
 ```
 
-Open in browser:
+---
+
+## Project Structure
 
 ```
-http://localhost:3000
+src/
+  app/            # Next.js app router
+  components/     # UI components
+    ui/           # reusable components (Button, etc.)
+    Hero/         # feature sections
+    Header/
+    Footer/
+  styles/         # global styles & variables
 ```
 
 ---
 
-## 🎯 Project Goals
+## Notes
 
-* Clean and professional design
-* Mobile-first and responsive layout
-* Fast loading times
-* Clear call-to-actions for conversions
-
----
-
-## 📍 Location
-
-Based in Dalarna, Sweden.
+* Uses CSS Modules for scoped styling
+* Component-based structure for reuse
+* Designed mobile-first
 
 ---
 
-## 📞 Contact
+## Status
 
-Coming soon via website contact form.
-
----
-
-## 🛠 Status
-
-🚧 Work in progress
-
----
-
-## 📄 License
-
-No license specified.
+Work in progress.
