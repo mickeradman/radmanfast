@@ -9,7 +9,7 @@ type HeaderProps = {
     title?: string;
 }
 
-const Header = ({ title = 'Rådman Fastighetsservice' }: HeaderProps) => {
+export const Header = ({ title = 'Rådman Fastighetsservice' }: HeaderProps) => {
     return (
         <header className={styles.header}>
             <div className="container">
@@ -30,5 +30,3 @@ const Header = ({ title = 'Rådman Fastighetsservice' }: HeaderProps) => {
         </header>
     );
 };
-
-export default Header;

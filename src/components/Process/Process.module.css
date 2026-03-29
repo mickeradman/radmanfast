@@ -1,0 +1,145 @@
+.process {
+    display: flex;
+    min-height: 600px;
+    background-color: #f5f7f6;
+    color: var(--color-text);
+    padding: var(--spacing-3xl) 0;
+}
+
+.processContent {
+    display: grid;
+    grid-template-areas:
+  "text ."
+  ". process"
+  "bullets .";
+    align-items: center;
+    gap: var(--spacing-2xl) var(--spacing-6xl);
+}
+
+.processTextContainer {
+    grid-area: text;
+    max-width: 600px;
+}
+
+.processHeading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    max-width: 16ch;
+    margin-top: 0;
+}
+
+.processText,
+.bullet {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+    max-width: 50ch;
+    /* color: #e0e0e0; */
+}
+
+.processList {
+    grid-area: process;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center;
+    justify-items: center; */
+    gap: var(--spacing-2xl);
+}
+
+.processItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.bulletList {
+    grid-area: bullets;
+    display: flex;
+    flex-direction: column;
+}
+
+.bullet {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive design */
+@media (max-width: 1400px) {
+    .bulletList {
+        margin-right: 0;
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .processContent {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4xl);
+    }
+
+    .leftColumn {
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-4xl);
+    }
+
+    .processTextContainer {
+        padding: 0 var(--spacing-lg);
+        max-width: 100%;
+    }
+
+    .processHeading {
+        font-size: var(--font-size-4xl);
+        max-width: 100%;
+    }
+
+    .processText,
+    .bullet {
+        font-size: var(--font-size-lg);
+        max-width: 45ch;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .process {
+        padding: 0;
+    }
+
+    .processContent {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding-bottom: var(--spacing-2xl);
+    }
+
+    .leftColumn {
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-2xl);
+    }
+
+    .processTextContainer {
+        padding: 0 var(--spacing-lg);
+        max-width: 100%;
+    }
+
+    .processHeading {
+        font-size: 2.25rem;
+        max-width: 100%;
+    }
+
+    .processText,
+    .bullet {
+        font-size: var(--font-size-md);
+        max-width: 100%;
+    }
+
+    .bulletList {
+        justify-content: center;
+        padding: 0 var(--spacing-lg);
+    }
+}

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import Header from '../components/Header/Header';
+import { Header } from '../components/Header/Header';
 
 import styles from './layout.module.css';
 
@@ -20,9 +20,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="sv">
       <body className={styles.body}>
-        <header>
-          <Header />
-        </header>
+        <Header />
         <main className={styles.main}>
           {children}
         </main>
