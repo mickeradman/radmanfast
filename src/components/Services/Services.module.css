@@ -1,7 +1,7 @@
 .services {
     display: flex;
     min-height: 600px;
-    background-color: #f5f7f6;
+    background: linear-gradient(135deg, #f9fffb 0%, #efffef 100%);
     color: var(--color-text);
     padding: var(--spacing-3xl) 0;
 }
@@ -40,30 +40,7 @@
     margin: 0;
     opacity: 0.95;
     max-width: 50ch;
-    /* color: #e0e0e0; */
-}
-
-.rightColumn {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    gap: var(--spacing-2xl);
-    margin-right: -80px
-}
-
-.service {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-/* Responsive design */
-@media (max-width: 1400px) {
-    .rightColumn {
-        justify-content: center;
-        margin-right: 0;
-    }
+    /* color: var(--color-text-light); */
 }
 
 /* Tablet styles */
@@ -129,10 +106,5 @@
     .bullet {
         font-size: var(--font-size-md);
         max-width: 100%;
-    }
-
-    .rightColumn {
-        justify-content: center;
-        padding: 0 var(--spacing-lg);
     }
 }

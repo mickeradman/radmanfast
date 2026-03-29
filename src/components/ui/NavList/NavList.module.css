@@ -1,0 +1,32 @@
+.navList {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+    font-weight: bold;
+}
+
+.navListItem {
+    position: relative;
+}
+
+.navListItem::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -4px;
+
+    width: 0%;
+    height: 1px;
+    background-color: var(--color-text);
+
+    transform: translateX(-50%);
+    opacity: 0;
+
+    transition: width 0.25s ease, opacity 0.2s ease;
+}
+
+.navListItem:hover::after {
+    width: 100%;
+    opacity: 1;
+}

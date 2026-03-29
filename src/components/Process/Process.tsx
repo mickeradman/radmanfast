@@ -1,3 +1,6 @@
+import { BulletPointList } from "@/components/ui/";
+import { ProcessBulletPoints } from "@/data/bullets";
+
 import "@/app/globals.css";
 import styles from "./Process.module.css";
 
@@ -24,10 +27,7 @@ export const Process = () => {
                             Vi följer upp projektet och säkerställer nöjdhet. </li>
                     </ul>
                     <ul className={styles.bulletList}>
-                        <li className={styles.bullet}>✔ Respektfull hantering av hem och bohag</li>
-                        <li className={styles.bullet}>✔ Fokus på återbruk och återvinning</li>
-                        <li className={styles.bullet}>✔ Tydlig kommunikation genom hela uppdraget</li>
-                        <li className={styles.bullet}>✔ Lokalt företag i Dalarna</li>
+                        <BulletPointList items={ProcessBulletPoints} dark={true} />
                     </ul>
                 </section>
             </div>

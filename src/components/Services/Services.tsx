@@ -1,3 +1,6 @@
+import { ServicesList } from "../ui";
+import { ServicesListItems } from "@/data/services";
+
 import "@/app/globals.css";
 import styles from "./Services.module.css";
 
@@ -15,13 +18,7 @@ export const Services = () => {
                         </article>
                     </section>
                     <section>
-                        {/* Bygg map-funktion för saker som bulletpoints och serviceobjekt */}
-                        <ul className={styles.rightColumn}>
-                            <li className={styles.service}>Dödsbotömning</li>
-                            <li className={styles.service}>Städning</li>
-                            <li className={styles.service}>Gräsklippning</li>
-                            <li className={styles.service}>Snöskottning</li>
-                        </ul>
+                        <ServicesList items={ServicesListItems} />
                     </section>
                 </section>
             </div>

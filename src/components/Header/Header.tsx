@@ -1,6 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/";
+import { Button, NavList } from "@/components/ui/";
+import { navItems } from "@/data/navigation";
 
 import "@/app/globals.css";
 import styles from './Header.module.css';
@@ -16,11 +17,7 @@ export const Header = ({ title = 'Rådman Fastighetsservice' }: HeaderProps) => 
                 <div className={styles.inner}>
                     <h1 className={styles.title}>{title}</h1>
                     <nav className={styles.nav}>
-                        <ul className={styles.navList}>
-                            <li><a href="/">Tjänster</a></li>
-                            <li><a href="/about">Så går det till</a></li>
-                            <li><a href="/contact">Kontakt</a></li>
-                        </ul>
+                        <NavList items={navItems} />
                     </nav>
                     <Button variant="secondary" onClick={() => alert("Kontaktformulär kommer snart!")}>
                         Kontakta oss

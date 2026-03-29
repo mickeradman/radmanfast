@@ -33,3 +33,12 @@ a {
   max-width: var(--container-width);
   margin: 0 auto;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}

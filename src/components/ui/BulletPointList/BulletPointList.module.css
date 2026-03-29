@@ -1,0 +1,29 @@
+.bullet {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+    max-width: 50ch;
+    color: var(--color-text-light);
+}
+
+.dark {
+    color: var(--color-text);
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .bullet {
+        font-size: var(--font-size-lg);
+        max-width: 45ch;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .bullet {
+        font-size: var(--font-size-md);
+        max-width: 100%;
+    }
+}

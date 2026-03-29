@@ -26,10 +26,3 @@
     display: flex;
     align-items: center;
 }
-
-.navList {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-md);
-    font-weight: bold;
-}

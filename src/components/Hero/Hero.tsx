@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { Button } from "@/components/ui/";
+import { Button, BulletPointList } from "@/components/ui/";
+import { HeroBulletPoints } from "@/data/bullets"
 
 import "@/app/globals.css";
 import styles from "./Hero.module.css";
@@ -31,9 +32,7 @@ export const Hero = () => {
                         </article>
                         <article>
                             <ul>
-                                <li className={styles.bullet}>✔ Kostnadsfri offert</li>
-                                <li className={styles.bullet}>✔ Flexibla uppdrag</li>
-                                <li className={styles.bullet}>✔ Snabb hjälp när det behövs</li>
+                                <BulletPointList items={HeroBulletPoints} />
                             </ul>
                         </article>
                     </section>

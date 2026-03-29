@@ -34,14 +34,13 @@
     max-width: 16ch;
 }
 
-.heroText,
-.bullet {
+.heroText {
     font-size: 1.125rem;
     line-height: 1.6;
     margin: 0;
     opacity: 0.95;
     max-width: 50ch;
-    color: #e0e0e0;
+    color: var(--color-text-light);
 }
 
 .ctaContainer {
@@ -95,8 +94,7 @@
         max-width: 100%;
     }
 
-    .heroText,
-    .bullet {
+    .heroText {
         font-size: var(--font-size-lg);
         max-width: 45ch;
         margin: 0 auto;
@@ -136,8 +134,7 @@
         max-width: 100%;
     }
 
-    .heroText,
-    .bullet {
+    .heroText {
         font-size: var(--font-size-md);
         max-width: 100%;
     }

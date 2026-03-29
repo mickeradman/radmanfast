@@ -1,0 +1,44 @@
+.servicesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    justify-items: center;
+    gap: var(--spacing-2xl);
+    margin-right: -80px
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.serviceTitle {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin: 0;
+}
+
+.serviceDescription {
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+    opacity: 0.95;
+    max-width: 60ch;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 1400px) {
+    .servicesList {
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .servicesList {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}

@@ -9,9 +9,9 @@
 .processContent {
     display: grid;
     grid-template-areas:
-  "text ."
-  ". process"
-  "bullets .";
+        "text ."
+        ". process"
+        "bullets .";
     align-items: center;
     gap: var(--spacing-2xl) var(--spacing-6xl);
 }
@@ -31,13 +31,14 @@
 }
 
 .processText,
+.processItem,
 .bullet {
     font-size: 1.125rem;
     line-height: 1.6;
     margin: 0;
     opacity: 0.95;
     max-width: 50ch;
-    /* color: #e0e0e0; */
+    /* color: var(--color-text-light); */
 }
 
 .processList {
@@ -61,11 +62,6 @@
     flex-direction: column;
 }
 
-.bullet {
-    display: flex;
-    flex-direction: column;
-}
-
 /* Responsive design */
 @media (max-width: 1400px) {
     .bulletList {
@@ -77,12 +73,6 @@
 @media (max-width: 1024px) {
     .processContent {
         grid-template-columns: 1fr;
-        gap: var(--spacing-4xl);
-    }
-
-    .leftColumn {
-        align-items: center;
-        text-align: center;
         gap: var(--spacing-4xl);
     }
 

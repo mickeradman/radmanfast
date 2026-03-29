@@ -3,8 +3,8 @@
   --color-primary: #2F4F3E;
   --color-primary-light: #6E8B74;
 
---color-accent: #35a567;
---color-accent-hover: #2e955c;
+  --color-accent: #35a567;
+  --color-accent-hover: #2e955c;
 
   /* === Backgrounds === */
   --color-bg: #FFFFFF;
@@ -13,10 +13,11 @@
 
   /* === Text === */
   --color-text: #2B2B2B;
+  --color-text-light: #e0e0e0;
   --color-text-muted: #ffffffd9;
 
   /* === UI === */
-  --color-border: #E0E0E0;
+  --color-border: #e0e0e0;
   --color-disabled: #A0A0A0;
 
   /* === Spacing === */
