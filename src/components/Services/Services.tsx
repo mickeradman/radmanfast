@@ -9,14 +9,12 @@ export const Services = () => {
         <div className={styles.services}>
             <div className="container">
                 <section className={styles.servicesContent}>
-                    <section className={styles.leftColumn}>
-                        <article className={styles.servicesTextContainer}>
-                            <h1 className={styles.servicesHeading}>Våra tjänster</h1>
-                            <p className={styles.servicesText}>
-                                Vi gör det enkelt att få hjälp. Kontakta oss så tar vi hand om resten.
-                            </p>
-                        </article>
-                    </section>
+                    <article className={styles.servicesTextContainer}>
+                        <h1 className={styles.servicesHeading}>Våra tjänster</h1>
+                        <p className={styles.servicesText}>
+                            Vi gör det enkelt att få hjälp. Kontakta oss så tar vi hand om resten.
+                        </p>
+                    </article>
                     <section>
                         <ServicesList items={ServicesListItems} />
                     </section>
