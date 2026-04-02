@@ -1,11 +1,8 @@
 .hero {
     display: flex;
-    min-height: 600px;
-    background: linear-gradient(135deg,
-            #2F4F3E 0%,
-            #4f7f66 100%);
-    color: white;
-    padding: var(--spacing-3xl) 0;
+    background: var(--color-bg-hero);
+    color: var(--color-hero-heading);
+    padding: var(--spacing-4xl) 0;
 }
 
 .heroContent {
@@ -24,12 +21,14 @@
 
 .heroTextContainer {
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
 }
 
 .heroHeading {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 20px;
     line-height: 1.2;
     max-width: 16ch;
 }
@@ -40,12 +39,17 @@
     margin: 0;
     opacity: 0.95;
     max-width: 50ch;
-    color: var(--color-text-light);
+    color: var(--color-text-on-dark);
 }
 
 .ctaContainer {
     display: flex;
     gap: var(--spacing-lg);
+}
+
+.bulletList {
+    color: var(--color-text-on-dark);
+    opacity: 0.80;
 }
 
 .rightColumn {

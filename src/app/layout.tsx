@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import { Header } from '../components/Header/Header';
+import { Footer } from '../components/Footer/Footer';
 
 import styles from './layout.module.css';
 
@@ -24,9 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <main className={styles.main}>
           {children}
         </main>
-        <footer className={styles.footer}>
-          &copy; {new Date().getFullYear()} Rådman Fastighetsservice.
-        </footer>
+        <Footer />
       </body>
     </html>
   );

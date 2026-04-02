@@ -30,10 +30,8 @@ export const Hero = () => {
                                 Kontakta oss
                             </Button>
                         </article>
-                        <article>
-                            <ul>
-                                <BulletPointList items={HeroBulletPoints} />
-                            </ul>
+                        <article className={styles.bulletList}>
+                            <BulletPointList items={HeroBulletPoints} />
                         </article>
                     </section>
                     <section className={styles.rightColumn}>

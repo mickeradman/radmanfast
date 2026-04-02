@@ -6,14 +6,12 @@ type NavListProps = {
 
 export const NavList = ({ items }: NavListProps) => {
     return (
-        <>
-            <ul className={styles.navList}>
-                {items.map((item) => (
-                    <li key={item.href} className={styles.navListItem}>
-                        <a href={item.href}>{item.label}</a>
-                    </li>
-                ))}
-            </ul>
-        </>
+        <ul className={styles.navList}>
+            {items.map((item) => (
+                <li key={item.href} className={styles.navListItem}>
+                    <a href={item.href}>{item.label}</a>
+                </li>
+            ))}
+        </ul>
     );
 };

@@ -9,12 +9,21 @@ body {
 
 body {
   background: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-text-dark);
 }
 
 * {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 ul {

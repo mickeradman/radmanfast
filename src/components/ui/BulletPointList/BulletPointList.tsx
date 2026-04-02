@@ -8,10 +8,12 @@ type BulletPointListProps = {
 
 export const BulletPointList = ({ items, dark }: BulletPointListProps) => {
     return (
-        items.map((item, index) => (
-            <li key={index} className={`${styles.bullet} ${dark ? styles.dark : ""}`}>
-                {item}
-            </li>
-        ))
+        <ul>
+            {items.map((item, index) => (
+                <li key={index} className={`${styles.bullet} ${dark ? styles.dark : ""}`}>
+                    {item}
+                </li>
+            ))}
+        </ul>
     );
 };

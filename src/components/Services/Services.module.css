@@ -1,9 +1,8 @@
 .services {
     display: flex;
-    min-height: 600px;
-    background: linear-gradient(135deg, #f9fffb 0%, #efffef 100%);
-    color: var(--color-text);
-    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+    padding: var(--spacing-4xl) 0;
 }
 
 .servicesContent {
@@ -24,6 +23,7 @@
     line-height: 1.2;
     max-width: 16ch;
     margin-top: 0;
+    color: var(--color-heading);
 }
 
 .servicesText,
@@ -33,7 +33,7 @@
     margin: 0;
     opacity: 0.95;
     max-width: 50ch;
-    /* color: var(--color-text-light); */
+    /* color: var(--color-text-on-dark); */
 }
 
 /* Tablet styles */

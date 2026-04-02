@@ -1,9 +1,8 @@
 .process {
     display: flex;
-    min-height: 600px;
-    background-color: #f5f7f6;
-    color: var(--color-text);
-    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-bg-process);
+    color: var(--color-heading);
+    padding: var(--spacing-4xl) 0;
 }
 
 .processContent {
@@ -38,7 +37,7 @@
     margin: 0;
     opacity: 0.95;
     max-width: 50ch;
-    /* color: var(--color-text-light); */
+    /* color: var(--color-text-on-dark); */
 }
 
 .processList {

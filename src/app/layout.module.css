@@ -3,16 +3,6 @@
     padding-top: var(--spacing-smd);
 }
 
-/* Footer - Temporary footer until the right one is in place */
-.footer {
-    background-color: #293036;
-    padding: var(--spacing-xl);
-    margin-top: auto;
-    text-align: center;
-    color: #b4bcc4;
-    font-size: var(--font-size-sm);
-}
-
 /* Mobile styles */
 @media (max-width: 768px) {
     /* .main {

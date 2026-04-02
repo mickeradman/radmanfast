@@ -1,24 +1,32 @@
 :root {
   /* === Brand === */
-  --color-primary: #2F4F3E;
-  --color-primary-light: #6E8B74;
+  --brand-navy: #1b263b;
+  --brand-navy-light: #415a77;
+  --brand-sand: #e5d3b3;
+  --brand-sand-hover: #d4bd96;
 
-  --color-accent: #35a567;
-  --color-accent-hover: #2e955c;
+  /* === Accent === */
+  --color-accent: var(--brand-sand);
+  --color-accent-hover: var(--brand-sand-hover);
 
   /* === Backgrounds === */
-  --color-bg: #FFFFFF;
-  --color-surface: #FFFFFF;
-  --color-header: #FFFFFF;
+  --color-bg: #ffffff;
+  --color-header: #ffffff;
+  --color-bg-hero: linear-gradient(135deg,
+      var(--brand-navy) 0%,
+      var(--brand-navy-light) 100%);
+  --color-bg-process: #F4F7F9;
+  --color-bg-footer: var(--brand-navy);
 
   /* === Text === */
-  --color-text: #2B2B2B;
-  --color-text-light: #e0e0e0;
-  --color-text-muted: #ffffffd9;
+  --color-hero-heading: #ffffff;
+  --color-text-dark: #2b2b2b;
+  --color-text-on-dark: #b8c7d9;
+  --color-heading: var(--brand-navy);
 
   /* === UI === */
   --color-border: #e0e0e0;
-  --color-disabled: #A0A0A0;
+  --color-disabled: #a0a0a0;
 
   /* === Spacing === */
   --spacing-xs: 0.25rem;
