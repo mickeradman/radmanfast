@@ -1,7 +1,7 @@
 .footer {
-    background-color: var(--color-bg-footer);
-    color: var(--color-text-on-dark);
-    border-top: 1px solid var(--color-accent);
+    background-color: var(--bg-dark);
+    color: var(--text-on-dark-soft);
+    border-top: 1px solid var(--action-primary);
 }
 
 .inner {

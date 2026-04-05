@@ -6,7 +6,7 @@ import styles from "./Process.module.css";
 
 export const Process = () => {
     return (
-        <div className={styles.process}>
+        <div className={styles.process} id="how-it-works">
             <div className="container">
                 <section className={styles.processContent}>
                     <article className={styles.processTextContainer}>

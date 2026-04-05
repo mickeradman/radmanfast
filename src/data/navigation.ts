@@ -1,5 +1,5 @@
 export const navItems = [
-    { label: 'Tjänster', href: '/' },
-    { label: 'Så går det till', href: '/about' },
-    { label: 'Kontakt', href: '/contact' },
+    { label: 'Tjänster', href: '#services' },
+    { label: 'Så går det till', href: '#how-it-works' },
+    { label: 'Kontakt', href: '#contact' },
 ];

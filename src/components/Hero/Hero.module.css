@@ -1,7 +1,7 @@
 .hero {
     display: flex;
-    background: var(--color-bg-hero);
-    color: var(--color-hero-heading);
+    background: var(--bg-dark-gradient);
+    color: var(--text-on-dark);
     padding: var(--spacing-4xl) 0;
 }
 
@@ -39,7 +39,7 @@
     margin: 0;
     opacity: 0.95;
     max-width: 50ch;
-    color: var(--color-text-on-dark);
+    color: var(--text-on-dark-soft);
 }
 
 .ctaContainer {
@@ -48,7 +48,7 @@
 }
 
 .bulletList {
-    color: var(--color-text-on-dark);
+    color: var(--text-on-dark-soft);
     opacity: 0.80;
 }
 

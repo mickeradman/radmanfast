@@ -1,12 +1,12 @@
 .header {
     width: 100%;
     margin: 0 auto;
-    background-color: var(--color-header);
-    color: var(--color-heading);
+    background-color: var(--bg-main);
+    color: var(--text-heading);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid var(--color-accent);
+    border-bottom: 1px solid var(--action-primary);
 }
 
 .inner {
@@ -20,6 +20,24 @@
 .title {
     font-size: var(--font-size-md);
     font-weight: 500;
+}
+
+.title:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.brandMain {
+    color: var(--text-heading);
+    font-weight: 700;
+    padding-right: 6px;
+    letter-spacing: 0.8px;
+}
+
+.brandSub {
+    color: var(--navy-700);
+    font-weight: 400;
+    letter-spacing: 1.1px;
 }
 
 .nav {

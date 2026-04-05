@@ -14,6 +14,7 @@ export const ServicesList = ({ items }: ServicesList) => {
                 <li key={index} className={styles.service}>
                     <h3 className={styles.serviceTitle}>{item.title}</h3>
                     <p className={styles.serviceDescription}>{item.description}</p>
+                    <p className={styles.readMore}>Läs mer →</p>
                 </li>
             ))}
         </ul>

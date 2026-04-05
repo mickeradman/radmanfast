@@ -1,32 +1,55 @@
 :root {
-  /* === Brand === */
-  --brand-navy: #1b263b;
-  --brand-navy-light: #415a77;
-  --brand-sand: #e5d3b3;
-  --brand-sand-hover: #d4bd96;
+  /* Primitive colors */
+  --navy-900: #1b263b;
+  --navy-700: #415a77;
 
-  /* === Accent === */
-  --color-accent: var(--brand-sand);
-  --color-accent-hover: var(--brand-sand-hover);
+  --sand-50: #fff5e7;
+  --sand-500: #e5d3b3;
+  --sand-600: #d4bd96;
 
-  /* === Backgrounds === */
-  --color-bg: #ffffff;
-  --color-header: #ffffff;
-  --color-bg-hero: linear-gradient(135deg,
-      var(--brand-navy) 0%,
-      var(--brand-navy-light) 100%);
-  --color-bg-process: #F4F7F9;
-  --color-bg-footer: var(--brand-navy);
+  --leather-700: #8C6239;
 
-  /* === Text === */
-  --color-hero-heading: #ffffff;
-  --color-text-dark: #2b2b2b;
-  --color-text-on-dark: #b8c7d9;
-  --color-heading: var(--brand-navy);
+  --white: #ffffff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-400: #94a3b8;
+  --slate-50: #f4f7f9;
+  --slate-300: #b8c7d9;
+  --slate-500: #64748b;
+  --black-800: #2b2b2b;
 
-  /* === UI === */
-  --color-border: #e0e0e0;
-  --color-disabled: #a0a0a0;
+  /* Backgrounds */
+  --bg-main: var(--white);
+  --bg-soft: var(--gray-50);
+  --bg-subtle: var(--slate-50);
+  --bg-dark: var(--navy-900);
+  --bg-dark-gradient: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+
+  /* Text */
+  --text-main: var(--black-800);
+  --text-muted: var(--slate-500);
+  --text-heading: var(--navy-900);
+  --text-on-dark: var(--white);
+  --text-on-dark-soft: var(--slate-300);
+
+  /* Buttons and interactions */
+  /* Primary */
+  --action-primary: var(--sand-500);
+  --action-primary-hover: var(--sand-600);
+  --action-primary-on-white: var(--sand-500);
+  --action-primary-on-white-hover: var(--sand-600);
+
+  /* Secondary */
+  --action-secondary: var(--leather-700);
+  --action-secondary-hover: var(--sand-600);
+  --action-secondary-on-white: var(--leather-700);
+  --action-secondary-on-white-hover: var(--sand-50);
+
+  /* UI-details */
+  --border-light: var(--gray-200);
+  --ui-disabled: var(--gray-400);
+
 
   /* === Spacing === */
   --spacing-xs: 0.25rem;
@@ -54,6 +77,7 @@
   --font-size-2xl: 2rem;
   --font-size-3xl: 2.25rem;
   --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3rem;
 
   /* === Font weights === */
   --font-weight-light: 300;
@@ -63,4 +87,7 @@
 
   /* === Container === */
   --container-width: 1200px;
+
+  /* === Navigation === */
+  --nav-click-margin: 67px;
 }
