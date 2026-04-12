@@ -1,7 +1,8 @@
 import React from 'react';
-import { Hero } from '../components/Hero/Hero';
-import { Services } from '../components/Services/Services';
+import { Hero } from '@/components/Hero/Hero';
+import { Services } from '@/components/Services/Services';
 import { Process } from '@/components/Process/Process';
+import { Contact } from '@/components/Contact/Contact';
 
 export default function Home() {
     return (
@@ -9,6 +10,7 @@ export default function Home() {
             <Hero />
             <Services />
             <Process />
+            <Contact />
         </>
     );
 }
