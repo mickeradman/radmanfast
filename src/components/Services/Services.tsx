@@ -18,9 +18,9 @@ export const Services = () => {
                             Vi gör det enkelt att få hjälp. Kontakta oss så tar vi hand om resten.
                         </p>
                     </article>
-                    <section>
+                    <article>
                         <ServicesList items={ServicesListItems} />
-                    </section>
+                    </article>
                 </section>
             </div>
         </div >
