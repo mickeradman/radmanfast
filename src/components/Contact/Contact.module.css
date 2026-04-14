@@ -1,6 +1,8 @@
 .contact {
-    padding: var(--spacing-6xl) 0;
-    background-color: var(--bg-soft);
+    background-color: var(--bg-main);
+    color: var(--text-heading);
+    padding: var(--spacing-4xl) 0;
+    scroll-margin-top: var(--nav-click-margin);
 }
 
 .contactContent {

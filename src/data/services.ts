@@ -5,9 +5,9 @@ export const ServicesListItems = [{
     title: 'Städning',
     description: 'Hemstädning, flyttstädning och enklare fastighetsstädning. Vi arbetar noggrant och anpassar oss efter dina behov.'
 }, {
-    title: 'Gräsklippning',
+    title: 'Gräsklippning och röjning',
     description: 'Vi hjälper till med gräsklippning och enklare trädgårdsskötsel så att din tomt håller sig i fint skick.'
 }, {
-    title: 'Röjning',
-    description: 'Vi erbjuder röjning av trädgårdar, tomter och mindre skogspartier.'
+    title: 'Annat',
+    description: 'Vi är flexibla och kan hjälpa till med andra uppgifter inom fastighetsservice. Kontakta oss för att diskutera dina behov.'
 }];

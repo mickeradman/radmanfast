@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { Header } from '../components/Header/Header';
 import { Footer } from '../components/Footer/Footer';
 
+import './globals.css';
 import styles from './layout.module.css';
 
 export const metadata = {

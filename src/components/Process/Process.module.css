@@ -7,17 +7,12 @@
 }
 
 .processContent {
-    display: grid;
-    grid-template-areas:
-        "text ."
-        ". process"
-        "bullets .";
-    align-items: center;
-    gap: var(--spacing-2xl) var(--spacing-6xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4xl) var(--spacing-6xl);
 }
 
 .processTextContainer {
-    grid-area: text;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -33,37 +28,6 @@
     margin: 0;
 }
 
-.processText,
-.processItem,
-.bullet {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    margin: 0;
-    opacity: 0.95;
-    max-width: 50ch;
-    /* color: var(--text-on-dark-soft); */
-}
-
-.processList {
-    grid-area: process;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* align-items: center;
-    justify-items: center; */
-    gap: var(--spacing-2xl);
-}
-
-.processItem {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-.bulletList {
-    grid-area: bullets;
-    display: flex;
-    flex-direction: column;
-}
 
 /* Responsive design */
 @media (max-width: 1400px) {

@@ -1,4 +1,3 @@
-import "@/app/globals.css";
 import styles from './BulletPointList.module.css';
 
 type BulletPointListProps = {
@@ -8,7 +7,7 @@ type BulletPointListProps = {
 
 export const BulletPointList = ({ items, dark }: BulletPointListProps) => {
     return (
-        <ul>
+        <ul className={styles.bulletList}>
             {items.map((item, index) => (
                 <li key={index} className={`${styles.bullet} ${dark ? styles.dark : ""}`}>
                     {item}
