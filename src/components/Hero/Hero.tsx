@@ -3,8 +3,8 @@ import Image from "next/image";
 import { Button, BulletPointList } from "@/components/ui/";
 import { HeroBulletPoints } from "@/data/bullets"
 
-import "@/app/globals.css";
 import styles from "./Hero.module.css";
+import { openContactForm } from "../utils/contact";
 
 export const Hero = () => {
     return (
@@ -16,17 +16,17 @@ export const Hero = () => {
                             <h1 className={styles.heroHeading}>Praktisk hjälp för hem och fastighet</h1>
                             <p className={styles.heroText}>
                                 Vi hjälper privatpersoner och fastighetsägare med städning, tömningar,
-                                gräsklippning, snöskottning och andra praktiska uppdrag.
+                                gräsklippning, röjning och andra praktiska uppdrag.
                                 <br />
                                 <br />
                                 Snabbt, tryggt och lokalt i Dalarna.
                             </p>
                         </article>
                         <article className={styles.ctaContainer}>
-                            <Button variant="primary" size="lg" hero onClick={() => alert("Offertformulär kommer snart!")}>
+                            <Button variant="primary" size="lg" hero onClick={() => openContactForm('offert')}>
                                 Begär offert
                             </Button>
-                            <Button variant="secondary" size="lg" hero onClick={() => alert("Kontaktformulär kommer snart!")}>
+                            <Button variant="secondary" size="lg" hero onClick={() => openContactForm('allman')}>
                                 Kontakta oss
                             </Button>
                         </article>

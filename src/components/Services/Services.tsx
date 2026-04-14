@@ -1,7 +1,6 @@
 import { ServicesList } from "../ui";
 import { ServicesListItems } from "@/data/services";
 
-import "@/app/globals.css";
 import styles from "./Services.module.css";
 
 export const Services = () => {

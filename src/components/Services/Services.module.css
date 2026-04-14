@@ -27,7 +27,7 @@
 }
 
 .servicesHeading {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-4xl);
     font-weight: 700;
     line-height: 1.2;
     max-width: 16ch;

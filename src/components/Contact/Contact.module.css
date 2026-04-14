@@ -15,7 +15,8 @@
 
 .leftColumn {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
 }
 
 .contactTextContainer {
@@ -24,14 +25,41 @@
 
 .contactHeading {
     font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 16ch;
     color: var(--text-heading);
+    margin: 0;
 }
 
 .contactText {
     font-size: var(--font-size-md);
     line-height: 1.8;
     color: var(--text-main);
+}
+
+.contactInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.contactInfoItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.contactInfoHeading {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-heading);
+}
+
+.contactInfoText {
+    font-size: var(--font-size-md);
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
 .rightColumn {
@@ -50,6 +78,12 @@
     border: 1px solid var(--border-light);
     border-radius: var(--border-radius-lg);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
 }
 
 .formLabel {

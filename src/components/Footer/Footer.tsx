@@ -1,4 +1,3 @@
-import "@/app/globals.css";
 import styles from './Footer.module.css';
 
 export const Footer = () => {

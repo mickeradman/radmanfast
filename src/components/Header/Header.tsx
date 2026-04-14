@@ -1,9 +1,9 @@
 "use client";
 
 import { Button, NavList } from "@/components/ui/";
+import { openContactForm } from "../utils/contact";
 import { navItems } from "@/data/navigation";
 
-import "@/app/globals.css";
 import styles from './Header.module.css';
 
 type HeaderProps = {
@@ -31,7 +31,7 @@ export const Header = ({ title }: HeaderProps) => {
                     <nav className={styles.nav}>
                         <NavList items={navItems} />
                     </nav>
-                    <Button variant="secondary" onClick={() => alert("Kontaktformulär kommer snart!")}>
+                    <Button variant="secondary" onClick={() => openContactForm('allman')}>
                         Kontakta oss
                     </Button>
                 </div>

@@ -19,15 +19,18 @@
 .processTextContainer {
     grid-area: text;
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
 }
 
 .processHeading {
-    font-size: 3rem;
+    font-size: var(--font-size-4xl);
     font-weight: 700;
-    margin-bottom: 20px;
     line-height: 1.2;
     max-width: 16ch;
-    margin-top: 0;
+    color: var(--text-heading);
+    margin: 0;
 }
 
 .processText,
