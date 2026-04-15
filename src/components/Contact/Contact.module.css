@@ -1,139 +1,84 @@
 .contact {
-    background-color: var(--bg-main);
-    color: var(--text-heading);
-    padding: var(--spacing-4xl) 0;
-    scroll-margin-top: var(--nav-click-margin);
+  background-color: var(--bg-main);
+  color: var(--text-heading);
+  padding: var(--spacing-4xl) 0;
+  scroll-margin-top: var(--nav-click-margin);
 }
 
 .contactContent {
-    display: grid;
-    gap: var(--spacing-5xl);
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--spacing-lg);
-    grid-template-columns: 1fr;
-    align-items: start;
+  display: grid;
+  gap: var(--spacing-5xl);
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  grid-template-columns: 1fr;
+  align-items: start;
 }
 
 .leftColumn {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
 }
 
 .contactTextContainer {
-    max-width: 560px;
+  max-width: 560px;
 }
 
 .contactHeading {
-    font-size: var(--font-size-4xl);
-    font-weight: 700;
-    line-height: 1.2;
-    max-width: 16ch;
-    color: var(--text-heading);
-    margin: 0;
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 16ch;
+  color: var(--text-heading);
+  margin: 0 0 var(--spacing-md) 0;
 }
 
 .contactText {
-    font-size: var(--font-size-md);
-    line-height: 1.8;
-    color: var(--text-main);
+  font-size: var(--font-size-md);
+  line-height: 1.8;
+  color: var(--text-main);
+  margin-bottom: var(--spacing-md);
 }
 
 .contactInfoContainer {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
 }
 
 .contactInfoItem {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .contactInfoHeading {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-medium);
-    color: var(--text-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-heading);
+  margin: 0;
 }
 
 .contactInfoText {
-    font-size: var(--font-size-md);
-    color: var(--text-main);
-    line-height: 1.6;
+  font-size: var(--font-size-md);
+  color: var(--text-main);
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.contactInfoText:hover {
+  color: var(--action-primary);
 }
 
 .rightColumn {
-    display: flex;
-    justify-content: center;
-}
-
-.contactForm {
-    width: 100%;
-    max-width: 560px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    padding: var(--spacing-4xl);
-    background-color: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
-}
-
-.formGroup {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-
-.formLabel {
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    color: var(--text-heading);
-}
-
-.formInput {
-    width: 100%;
-    min-height: 3rem;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border: 1px solid var(--border-light);
-    border-radius: var(--border-radius-md);
-    background-color: var(--white);
-    color: var(--text-main);
-    font-size: var(--font-size-md);
-}
-
-.formInput:focus {
-    outline: none;
-    border-color: var(--action-primary);
-    box-shadow: 0 0 0 4px rgba(229, 211, 179, 0.25);
-}
-
-textarea.formInput {
-    min-height: 180px;
-    resize: vertical;
-}
-
-.formButton {
-    padding: var(--spacing-md) var(--spacing-lg);
-    border: none;
-    border-radius: var(--border-radius-md);
-    background-color: var(--action-primary);
-    color: var(--text-on-dark);
-    font-weight: var(--font-weight-medium);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.formButton:hover {
-    background-color: var(--action-primary-hover);
+  /* display: flex;
+  justify-content: center; */
 }
 
 @media (min-width: 768px) {
-    .contactContent {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-6xl);
-    }
+  .contactContent {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-6xl);
+  }
 }

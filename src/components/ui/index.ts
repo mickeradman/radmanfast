@@ -3,3 +3,4 @@ export * from './NavList/NavList';
 export * from './BulletPointList/BulletPointList';
 export * from './ServicesList/ServicesList';
 export * from './ProcessList/ProcessList';
+export * from './ContactForm/ContactForm';

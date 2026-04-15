@@ -1,33 +1,66 @@
-import { openContactForm } from "@/components/utils/contact";
-import styles from "./NavList.module.css";
-import { Link } from "lucide-react";
+import { openContactForm } from '@/components/utils/contact';
+import styles from './NavList.module.css';
+import { ChevronDown } from 'lucide-react'; // Importera pil-ikonen
+import NextLink from 'next/link'; // Använd Next.js Link för undersidor
 
 type NavListProps = {
-    items: { label: string; href: string; type?: string; dropdown?: { label: string; href: string }[] }[];
+  items: {
+    label: string;
+    href: string;
+    type?: string;
+    dropdown?: { label: string; href: string }[];
+  }[];
 };
 
 export const NavList = ({ items }: NavListProps) => {
-    return (
-        <ul className={styles.navList}>
-            {items.map((item) => (
-                <li key={item.href} className={styles.navListItem}>
-                    <a href={item.href} onClick={item.href === '#contact' ? () => openContactForm('allman') : undefined}>
-                        {item.label}
-                    </a>
-                </li>
-            ))}
-        </ul>
-    );
-};
+  return (
+    <ul className={styles.navList}>
+      {items.map((item) => {
+        const hasDropdown =
+          item.dropdown && item.dropdown.length > 0;
 
-// <li className={styles.navItem}>
-//   <div className={styles.dropdownWrapper}>
-//     <Link href="/#services">Tjänster</Link>
-//     <ChevronDown size={14} className={styles.arrow} />
-    
-//     <ul className={styles.dropdownMenu}>
-//       <li><Link href="/dodsbotomning">Dödsbotömning</Link></li>
-//       {/* Fler länkar... */}
-//     </ul>
-//   </div>
-// </li>
+        return (
+          <li
+            key={item.href}
+            className={`${styles.navListItem} ${hasDropdown ? styles.hasDropdown : ''}`}>
+            <div className={styles.linkWrapper}>
+              <a
+                href={item.href}
+                onClick={
+                  item.href === '/#contact'
+                    ? (e) => {
+                        e.preventDefault();
+                        openContactForm('allman');
+                      }
+                    : undefined
+                }>
+                {item.label}
+              </a>
+
+              {hasDropdown && (
+                <ChevronDown
+                  size={14}
+                  className={styles.chevron}
+                />
+              )}
+            </div>
+
+            {hasDropdown && (
+              <ul className={styles.dropdownMenu}>
+                {item.dropdown!.map((subItem) => (
+                  <li
+                    key={subItem.href}
+                    className={styles.dropdownItem}>
+                    <NextLink href={subItem.href}>
+                      {subItem.label}
+                    </NextLink>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+};

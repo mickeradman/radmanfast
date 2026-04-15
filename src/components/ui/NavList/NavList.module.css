@@ -1,32 +1,114 @@
 .navList {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-xl);
-    font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xl);
+  font-weight: bold;
+  list-style: none; /* Säkerställ att prickarna är borta */
+  align-items: center;
 }
 
 .navListItem {
-    position: relative;
+  position: relative;
+  padding: 0.5rem 0; /* Ger lite yta att hovra på */
 }
 
-.navListItem::after {
-    content: "";
-    position: absolute;
-
-    left: 50%;
-    bottom: -5px;
-
-    width: 0%;
-    height: 2px;
-    background-color: var(--text-heading);
-
-    transform: translateX(-50%);
-    opacity: 0;
-
-    transition: width 0.25s ease, opacity 0.2s ease;
+/* Din animerade underlinje anpassad för linkWrapper */
+.linkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 5px; /* Skapar plats för linjen */
 }
 
-.navListItem:hover::after {
-    width: 100%;
-    opacity: 1;
+.linkWrapper::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0; /* Justerad för att ligga tätt mot text/pil */
+  width: 0%;
+  height: 2px;
+  background-color: var(--text-heading);
+  transform: translateX(-50%);
+  opacity: 0;
+  transition:
+    width 0.25s ease,
+    opacity 0.2s ease;
+}
+
+/* Aktivera linjen när man hovrar över hela listelementet */
+.navListItem:hover .linkWrapper::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+  opacity: 0.8;
+}
+
+.navListItem:hover .chevron {
+  transform: rotate(180deg);
+}
+
+/* --- Dropdown Menyn --- */
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(
+    -50%
+  ); /* Centrerar dropdownen under länken */
+  background: white; /* Eller din specifika bakgrundsfärg */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 0;
+  min-width: 220px;
+  list-style: none;
+
+  /* Transition för dropdown */
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 10px;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    margin-top 0.2s ease;
+
+  z-index: 1000;
+}
+
+/* En "brygga" så att menyn inte stängs när man rör musen nedåt */
+.dropdownMenu::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
+
+.navListItem:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 5px; /* Flyttar upp den lite mjukt vid hovring */
+}
+
+.dropdownItem a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  color: var(--text-body); /* Eller din brödtextfärg */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: normal; /* Dropdown-länkar brukar se bättre ut som normalvikt */
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.dropdownItem a:hover {
+  background-color: #f8f9fa; /* Ljusgrå hover-färg */
+  color: var(--text-heading);
 }

@@ -20,7 +20,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="sv">
+    <html lang="sv" data-scroll-behavior="smooth">
       <body className={styles.body} id="home">
         <Header />
         <main className={styles.main}>
