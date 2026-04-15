@@ -8,6 +8,6 @@ export const ServicesListItems = [{
     title: 'Gräsklippning och röjning',
     description: 'Vi hjälper till med gräsklippning och enklare trädgårdsskötsel så att din tomt håller sig i fint skick.'
 }, {
-    title: 'Annat',
+    title: 'Övrig fastighetsservice',
     description: 'Vi är flexibla och kan hjälpa till med andra uppgifter inom fastighetsservice. Kontakta oss för att diskutera dina behov.'
 }];

@@ -1,8 +1,9 @@
 import { openContactForm } from "@/components/utils/contact";
 import styles from "./NavList.module.css";
+import { Link } from "lucide-react";
 
 type NavListProps = {
-    items: { label: string; href: string; type?: string }[];
+    items: { label: string; href: string; type?: string; dropdown?: { label: string; href: string }[] }[];
 };
 
 export const NavList = ({ items }: NavListProps) => {
@@ -18,3 +19,15 @@ export const NavList = ({ items }: NavListProps) => {
         </ul>
     );
 };
+
+// <li className={styles.navItem}>
+//   <div className={styles.dropdownWrapper}>
+//     <Link href="/#services">Tjänster</Link>
+//     <ChevronDown size={14} className={styles.arrow} />
+    
+//     <ul className={styles.dropdownMenu}>
+//       <li><Link href="/dodsbotomning">Dödsbotömning</Link></li>
+//       {/* Fler länkar... */}
+//     </ul>
+//   </div>
+// </li>
