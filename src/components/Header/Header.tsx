@@ -31,8 +31,8 @@ export const Header = ({ title }: HeaderProps) => {
                     <nav className={styles.nav}>
                         <NavList items={navItems} />
                     </nav>
-                    <Button variant="secondary" onClick={() => openContactForm('allman')}>
-                        Kontakta oss
+                    <Button variant="secondary" onClick={() => openContactForm('offert')}>
+                        Begär offert
                     </Button>
                 </div>
             </div>
