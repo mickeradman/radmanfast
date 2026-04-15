@@ -71,10 +71,10 @@
   color: var(--action-primary);
 }
 
-.rightColumn {
-  /* display: flex;
-  justify-content: center; */
-}
+/* .rightColumn {
+  display: flex;
+  justify-content: center;
+} */
 
 @media (min-width: 768px) {
   .contactContent {
