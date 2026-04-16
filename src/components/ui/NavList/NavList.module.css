@@ -3,30 +3,29 @@
   flex-direction: row;
   gap: var(--spacing-xl);
   font-weight: bold;
-  list-style: none; /* Säkerställ att prickarna är borta */
+  list-style: none;
   align-items: center;
 }
 
 .navListItem {
   position: relative;
-  padding: 0.5rem 0; /* Ger lite yta att hovra på */
+  padding: 0.5rem 0;
 }
 
-/* Din animerade underlinje anpassad för linkWrapper */
 .linkWrapper {
   display: flex;
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
   position: relative;
-  padding-bottom: 5px; /* Skapar plats för linjen */
+  padding-bottom: 5px;
 }
 
 .linkWrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
-  bottom: 0; /* Justerad för att ligga tätt mot text/pil */
+  bottom: 0;
   width: 0%;
   height: 2px;
   background-color: var(--text-heading);
@@ -37,7 +36,6 @@
     opacity 0.2s ease;
 }
 
-/* Aktivera linjen när man hovrar över hela listelementet */
 .navListItem:hover .linkWrapper::after {
   width: 100%;
   opacity: 1;
@@ -52,23 +50,21 @@
   transform: rotate(180deg);
 }
 
-/* --- Dropdown Menyn --- */
+/* --- Dropdown menu --- */
 
 .dropdownMenu {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(
-    -50%
-  ); /* Centrerar dropdownen under länken */
-  background: white; /* Eller din specifika bakgrundsfärg */
+  transform: translateX(-50%);
+  background: white;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 0.75rem 0;
   min-width: 220px;
   list-style: none;
 
-  /* Transition för dropdown */
+  
   opacity: 0;
   visibility: hidden;
   margin-top: 10px;
@@ -80,9 +76,8 @@
   z-index: 1000;
 }
 
-/* En "brygga" så att menyn inte stängs när man rör musen nedåt */
 .dropdownMenu::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -15px;
   left: 0;
@@ -93,22 +88,22 @@
 .navListItem:hover .dropdownMenu {
   opacity: 1;
   visibility: visible;
-  margin-top: 5px; /* Flyttar upp den lite mjukt vid hovring */
+  margin-top: 5px;
 }
 
 .dropdownItem a {
   display: block;
   padding: 0.6rem 1.2rem;
-  color: var(--text-body); /* Eller din brödtextfärg */
+  color: var(--text-body);
   text-decoration: none;
   font-size: 0.95rem;
-  font-weight: normal; /* Dropdown-länkar brukar se bättre ut som normalvikt */
+  font-weight: normal;
   transition:
     background 0.2s ease,
     color 0.2s ease;
 }
 
 .dropdownItem a:hover {
-  background-color: #f8f9fa; /* Ljusgrå hover-färg */
+  background-color: #e2e8f0;
   color: var(--text-heading);
 }

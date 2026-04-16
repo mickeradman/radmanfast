@@ -34,7 +34,7 @@
 }
 
 .heroText {
-    font-size: 1.125rem;
+    font-size: var(--font-size-lg);
     line-height: 1.6;
     margin: 0;
     opacity: 0.95;
@@ -61,7 +61,7 @@
 .heroImage {
     width: 100%;
     max-width: 600px;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--border-radius-md);
     object-fit: cover;
     opacity: 0.75;
     filter: drop-shadow(3px 3px 14px #1d1d1d);

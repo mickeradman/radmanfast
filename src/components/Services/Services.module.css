@@ -1,119 +1,118 @@
 .services {
-    display: flex;
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    padding: var(--spacing-4xl) 0;
-    scroll-margin-top: var(--nav-click-margin);
+  display: flex;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding: var(--spacing-4xl) 0;
+  scroll-margin-top: var(--nav-click-margin);
 }
 
 .servicesContent {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: var(--spacing-4xl);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-4xl);
 }
 
 .servicesTextContainer {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
 .servicesHeadingContainer {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .servicesHeading {
-    font-size: var(--font-size-4xl);
-    font-weight: 700;
-    line-height: 1.2;
-    max-width: 16ch;
-    color: var(--text-heading);
-    margin: 0;
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 16ch;
+  color: var(--text-heading);
+  margin: 0;
 }
 
 .servicesHeadingAccent {
-    width: 6ch;
-    height: 4px;
-    background-color: var(--action-primary);
-    opacity: 0.9;
+  width: 6ch;
+  height: 4px;
+  background-color: var(--action-primary);
+  opacity: 0.9;
 }
 
-.servicesText,
-.bullet {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    margin: 0;
-    opacity: 0.95;
-    max-width: 50ch;
-    /* color: var(--text-on-dark-soft); */
+.servicesText {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+  max-width: 50ch;
+  /* color: var(--text-on-dark-soft); */
 }
 
 /* Tablet styles */
 @media (max-width: 1024px) {
-    .servicesContent {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-4xl);
-    }
+  .servicesContent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4xl);
+  }
 
-    .leftColumn {
-        align-items: center;
-        text-align: center;
-        gap: var(--spacing-4xl);
-    }
+  .leftColumn {
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-4xl);
+  }
 
-    .servicesTextContainer {
-        padding: 0 var(--spacing-lg);
-        max-width: 100%;
-    }
+  .servicesTextContainer {
+    padding: 0 var(--spacing-lg);
+    max-width: 100%;
+  }
 
-    .servicesHeading {
-        font-size: var(--font-size-4xl);
-        max-width: 100%;
-    }
+  .servicesHeading {
+    font-size: var(--font-size-4xl);
+    max-width: 100%;
+  }
 
-    .servicesText,
-    .bullet {
-        font-size: var(--font-size-lg);
-        max-width: 45ch;
-        margin: 0 auto;
-    }
+  .servicesText,
+  .bullet {
+    font-size: var(--font-size-lg);
+    max-width: 45ch;
+    margin: 0 auto;
+  }
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    .services {
-        padding: 0;
-    }
+  .services {
+    padding: 0;
+  }
 
-    .servicesContent {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding-bottom: var(--spacing-2xl);
-    }
+  .servicesContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-bottom: var(--spacing-2xl);
+  }
 
-    .leftColumn {
-        align-items: center;
-        text-align: center;
-        gap: var(--spacing-2xl);
-    }
+  .leftColumn {
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-2xl);
+  }
 
-    .servicesTextContainer {
-        padding: 0 var(--spacing-lg);
-        max-width: 100%;
-    }
+  .servicesTextContainer {
+    padding: 0 var(--spacing-lg);
+    max-width: 100%;
+  }
 
-    .servicesHeading {
-        font-size: 2.25rem;
-        max-width: 100%;
-    }
+  .servicesHeading {
+    font-size: 2.25rem;
+    max-width: 100%;
+  }
 
-    .servicesText,
-    .bullet {
-        font-size: var(--font-size-md);
-        max-width: 100%;
-    }
+  .servicesText,
+  .bullet {
+    font-size: var(--font-size-md);
+    max-width: 100%;
+  }
 }

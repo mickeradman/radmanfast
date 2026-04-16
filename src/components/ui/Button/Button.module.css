@@ -4,7 +4,7 @@
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-medium);
     border: none;
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-md);
     cursor: pointer;
     line-height: 1;
     transition: background-color 0.2s ease, transform 0.2s ease;
