@@ -1,0 +1,280 @@
+.pageWrapper {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* Hero Section */
+.hero {
+  background: var(--bg-dark-gradient);
+  color: var(--text-on-dark);
+  padding: var(--spacing-4xl) 0 var(--spacing-5xl);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroInner {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--sand-500);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(229, 211, 179, 0.25);
+  width: fit-content;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--text-on-dark);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  color: var(--text-on-dark-soft);
+  margin: 0;
+}
+
+.heroButtons {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* RUT Card */
+.rutSection {
+  margin-top: -2rem;
+  margin-bottom: var(--spacing-4xl);
+  position: relative;
+  z-index: 2;
+}
+
+.rutCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-left: 5px solid var(--action-primary);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.rutIcon {
+  color: var(--navy-900);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.rutContent h3 {
+  font-size: var(--font-size-lg);
+  color: var(--text-heading);
+  margin-bottom: var(--spacing-xs);
+}
+
+.rutContent p {
+  color: var(--text-main);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: var(--spacing-2xl) 0 var(--spacing-4xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-3xl);
+}
+
+.serviceCard {
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-3xl);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cardIcon {
+  color: var(--navy-900);
+}
+
+.cardHeader h2 {
+  font-size: var(--font-size-xl);
+  color: var(--text-heading);
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.featureList li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: var(--font-size-md);
+}
+
+.checkIcon {
+  color: var(--leather-700);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* Process Section */
+.processSection {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--bg-subtle);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-4xl);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-3xl);
+  color: var(--text-heading);
+  text-align: center;
+}
+
+.headingAccent {
+  width: 6ch;
+  height: 4px;
+  background-color: var(--action-primary);
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-3xl);
+  text-align: center;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--navy-900);
+  color: var(--sand-500);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  border-radius: 50%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.step h3 {
+  font-size: var(--font-size-lg);
+  color: var(--text-heading);
+  margin-bottom: var(--spacing-xs);
+}
+
+.step p {
+  color: var(--text-main);
+  opacity: 0.85;
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CTA Banner (Ljus med --bg-main) */
+.ctaBanner {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding: var(--spacing-5xl) 0;
+  text-align: center;
+  border-top: 1px solid var(--border-light);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.ctaContent h2 {
+  font-size: var(--font-size-3xl);
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.ctaContent p {
+  font-size: var(--font-size-lg);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Responsivt för surfplatta och mobil */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rutCard {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -70,6 +70,18 @@
   gap: var(--spacing-sm);
 }
 
+.contactInfoHeadingWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.contactIcon {
+  color: var(
+    --navy-900
+  ); /* Eller var(--action-primary) om du vill ha sandfärgat */
+}
+
 .contactInfoHeading {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);

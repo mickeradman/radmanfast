@@ -1,9 +1,10 @@
+import { Mail, Phone } from "lucide-react";
 import { ContactForm } from "@/components/ui/";
 import styles from "./Contact.module.css";
 
 export const Contact = () => {
   return (
-    <div className={styles.contact} id="contact">
+    <div className={styles.contact} id="kontakt">
       <div className="container">
         <section className={styles.contactContent}>
           <article className={styles.leftColumn}>
@@ -19,7 +20,10 @@ export const Contact = () => {
             </section>
             <section className={styles.contactInfoContainer}>
               <div className={styles.contactInfoItem}>
-                <h2 className={styles.contactInfoHeading}>E-post</h2>
+                <div className={styles.contactInfoHeadingWrapper}>
+                  <Mail size={20} className={styles.contactIcon} />
+                  <h2 className={styles.contactInfoHeading}>E-post</h2>
+                </div>
                 <a
                   href="mailto:info@radmanfast.se"
                   className={styles.contactInfoText}
@@ -28,7 +32,10 @@ export const Contact = () => {
                 </a>
               </div>
               <div className={styles.contactInfoItem}>
-                <h2 className={styles.contactInfoHeading}>Telefon</h2>
+                <div className={styles.contactInfoHeadingWrapper}>
+                  <Phone size={20} className={styles.contactIcon} />
+                  <h2 className={styles.contactInfoHeading}>Telefon</h2>
+                </div>
                 <a href="tel:+46767083348" className={styles.contactInfoText}>
                   076-708 33 48
                 </a>

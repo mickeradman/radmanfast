@@ -1,53 +1,38 @@
-'use client';
+"use client";
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { Button } from '@/components/ui';
-import styles from '@/components/ui/ContactForm/ContactForm.module.css';
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import { Button } from "@/components/ui";
+import styles from "@/components/ui/ContactForm/ContactForm.module.css";
 
 const FormContent = () => {
-  const [issue, setIssue] = useState('');
+  const [issue, setIssue] = useState("");
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const handleSetIssue = (e: any) => {
-      setIssue(e.detail);
-
-      document
-        .getElementById('contact')
-        ?.scrollIntoView({ behavior: 'smooth' });
-    };
-
-    window.addEventListener(
-      'setContactIssue',
-      handleSetIssue,
-    );
-    return () =>
-      window.removeEventListener(
-        'setContactIssue',
-        handleSetIssue,
-      );
+    const savedIssue = localStorage.getItem("preferredContactIssue");
+    if (savedIssue) {
+      setIssue(savedIssue);
+      localStorage.removeItem("preferredContactIssue"); // Rensa direkt efter användning
+    }
   }, []);
 
   useEffect(() => {
-    const contactType = searchParams.get('contact');
+    const contactType = searchParams.get("contact");
 
-    if (
-      contactType === 'allman' ||
-      contactType === 'offert'
-    ) {
+    if (contactType === "allman" || contactType === "offert") {
       setIssue(contactType);
 
       setTimeout(() => {
-        const element = document.getElementById('contact');
+        // Ändrat till 'kontakt'
+        const element = document.getElementById("kontakt");
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: "smooth" });
         }
       }, 100);
 
-      const newUrl =
-        window.location.pathname + window.location.hash;
-      window.history.replaceState({}, '', newUrl);
+      const newUrl = window.location.pathname + window.location.hash;
+      window.history.replaceState({}, "", newUrl);
     }
   }, [searchParams]);
 
@@ -56,70 +41,66 @@ const FormContent = () => {
       className={styles.contactForm}
       onSubmit={(e) => {
         e.preventDefault();
-        alert(
-          'Tack för ditt meddelande! Vi återkommer så snart som möjligt.',
-        );
-      }}>
+        alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
+      }}
+    >
       <div className={styles.formGroup}>
-        <label
-          htmlFor='issueType'
-          className={styles.formLabel}>
+        <label htmlFor="issueType" className={styles.formLabel}>
           Ärendetyp
         </label>
         <select
-          id='issueType'
-          name='issueType'
+          id="issueType"
+          name="issueType"
           value={issue}
           onChange={(e) => setIssue(e.target.value)}
           className={styles.formInput}
-          required>
-          <option value=''>Välj ärendetyp</option>
-          <option value='offert'>Offert</option>
-          <option value='allman'>Allmän fråga</option>
+          required
+        >
+          <option value="">Välj ärendetyp</option>
+          <option value="offert">Offert</option>
+          <option value="allman">Allmän fråga</option>
         </select>
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor='name' className={styles.formLabel}>
+        <label htmlFor="name" className={styles.formLabel}>
           Namn
         </label>
         <input
-          type='text'
-          id='name'
-          name='name'
+          type="text"
+          id="name"
+          name="name"
           className={styles.formInput}
           required
         />
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor='email' className={styles.formLabel}>
+        <label htmlFor="email" className={styles.formLabel}>
           E-post
         </label>
         <input
-          type='email'
-          id='email'
-          name='email'
+          type="email"
+          id="email"
+          name="email"
           className={styles.formInput}
           required
         />
       </div>
 
       <div className={styles.formGroup}>
-        <label
-          htmlFor='message'
-          className={styles.formLabel}>
+        <label htmlFor="message" className={styles.formLabel}>
           Meddelande
         </label>
         <textarea
-          id='message'
-          name='message'
+          id="message"
+          name="message"
           className={styles.formInput}
           required
         />
       </div>
 
-      <Button type='submit' className={styles.formButton}>
+      <Button type="submit" variant="primary" theme="light" fullWidth>
         Skicka meddelande
       </Button>
     </form>
@@ -128,7 +109,7 @@ const FormContent = () => {
 
 export const ContactForm = () => {
   return (
-    <div id='contact-form-wrapper'>
+    <div id="contact-form-wrapper">
       <Suspense fallback={<div>Laddar formulär...</div>}>
         <FormContent />
       </Suspense>

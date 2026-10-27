@@ -1,73 +1,87 @@
+/* Bas-stil för alla knappar */
 .button {
-    display: inline-block;
-    padding: var(--spacing-smd) var(--spacing-lg);
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-medium);
-    border: none;
-    border-radius: var(--border-radius-md);
-    cursor: pointer;
-    line-height: 1;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.primary {
-    background-color: var(--action-primary);
+.button:active {
+  transform: scale(0.98);
 }
 
-.primary:hover {
-    background-color: var(--action-primary-hover);
-}
-
-.hero {
-    color: #1A2B3C;
-}
-
-.primary.hero {
-    background-color: var(--action-primary);
-}
-
-.primary.hero:hover {
-    background-color: var(--action-primary-hover);
-}
-
-.secondary {
-    background-color: transparent;
-    color: var(--text-heading);
-    border: 1px solid var(--action-secondary-on-white);
-}
-
-.secondary:hover {
-    background-color: var(--action-secondary-on-white-hover);
-    /* color: var(--action-secondary-on-white); */
-}
-
-.secondary.hero {
-    background-color: transparent;
-    color: var(--action-primary);
-    border: 1px solid var(--action-primary);
-}
-
-.secondary.hero:hover {
-    color: var(--action-secondary-hover);
-}
-
-.button:disabled {
-    background-color: var(--ui-disabled);
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.sm {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: var(--font-size-sm);
-}
-
+/* --- STORLEKAR --- */
 .md {
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-size: var(--font-size-md);
+  font-size: var(--font-size-md);
+  padding: 0.65rem 1.35rem;
 }
 
 .lg {
-    padding: var(--spacing-md) var(--spacing-xl);
-    font-size: var(--font-size-lg);
+  font-size: var(--font-size-lg);
+  padding: 0.85rem 1.85rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* --- MÖRK BAKGRUND (Dark Theme: Hero, Mörka CTA-banners) --- */
+
+/* Primary on Dark: Varm sandfärg med mörkblå text */
+.dark.primary {
+  background-color: var(--action-primary);
+  color: var(--navy-900);
+  border-color: var(--action-primary);
+}
+
+.dark.primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary on Dark: Transparent med ljus kantlinje & vit text */
+.dark.secondary {
+  background-color: transparent;
+  color: var(--text-on-dark);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.dark.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--action-primary);
+}
+
+/* --- LJUST TEMA (Light Theme: Kontaktformulär, Vita kort & sektioner) --- */
+
+/* Primary on Light: Navy-700 som bas med vit text */
+.light.primary {
+  background-color: var(--navy-700);
+  color: var(--white);
+  border-color: var(--navy-700);
+}
+
+.light.primary:hover {
+  background-color: var(--navy-500);
+  border-color: var(--navy-500);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Secondary on Light: Mörkblå/Grafit med ljus bakgrund */
+.light.secondary {
+  background-color: var(--bg-soft);
+  color: var(--text-heading);
+  border-color: var(--border-light);
+}
+
+.light.secondary:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--navy-900);
 }

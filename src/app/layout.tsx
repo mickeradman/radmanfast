@@ -1,17 +1,18 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-import { Header } from '../components/Header/Header';
-import { Footer } from '../components/Footer/Footer';
+import { Header } from "../components/Header/Header";
+import { Footer } from "../components/Footer/Footer";
+import { ScrollToTop } from "../components/utils/ScrollToTop";
 
-import './globals.css';
-import styles from './layout.module.css';
+import "./globals.css";
+import styles from "./layout.module.css";
 
 export const metadata = {
   title: {
-    default: 'Rådman Fastighetsservice',
-    template: '%s | Rådman Fastighetsservice',
+    default: "Rådman Fastighetsservice",
+    template: "%s | Rådman Fastighetsservice",
   },
-  description: 'Fastighetsservice i Dalarna',
+  description: "Fastighetsservice i Dalarna",
 };
 
 type RootLayoutProps = {
@@ -21,11 +22,11 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="sv" data-scroll-behavior="smooth">
-      <body className={styles.body} id="home">
+      <body className={styles.body} suppressHydrationWarning>
+        <ScrollToTop />
+        <div id="home" />
         <Header />
-        <main className={styles.main}>
-          {children}
-        </main>
+        <main className={styles.main}>{children}</main>
         <Footer />
       </body>
     </html>

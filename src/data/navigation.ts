@@ -1,8 +1,8 @@
 export const navItems = [
-  { label: 'Hem', href: '/#home' },
+  { label: 'Hem', href: '/' },
   {
     label: 'Tjänster',
-    href: '/#services',
+    href: '/#tjanster',
     dropdown: [
       { label: 'Dödsbotömning', href: '/dodsbotomning' },
       { label: 'Städning', href: '/stadning' },
@@ -16,7 +16,7 @@ export const navItems = [
       },
     ],
   },
-  { label: 'Så går det till', href: '/#how-it-works' },
-  { label: 'Om oss', href: '/#about-us' },
-  { label: 'Kontakt', href: '/#contact', type: 'allman' },
+  { label: 'Så går det till', href: '/#sa-gar-det-till' },
+  { label: 'Om oss', href: '/#om-oss' },
+  { label: 'Kontakt', href: '/#kontakt', type: 'allman' },
 ];

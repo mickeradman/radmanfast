@@ -1,27 +1,39 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, ButtonHTMLAttributes } from "react";
 import styles from "./Button.module.css";
 
-type ButtonProps = {
-    variant?: "primary" | "secondary";
-    hero?: boolean;
-    size?: "sm" | "md" | "lg";
-    children: ReactNode;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: ReactNode;
+  variant?: "primary" | "secondary";
+  theme?: "dark" | "light"; // dark = för mörka bakgrunder (Hero, CTA), light = för ljusa (Formulär, vanliga sektioner)
+  size?: "md" | "lg";
+  fullWidth?: boolean;
+};
 
 export const Button = ({
-    variant = "primary",
-    hero = false,
-    size = "md",
-    children,
-    className,
-    ...rest
+  children,
+  variant = "primary",
+  theme = "dark",
+  size = "md",
+  fullWidth = false,
+  className = "",
+  ...props
 }: ButtonProps) => {
-    return (
-        <button
-            className={`${styles.button} ${styles[variant]} ${styles[hero ? "hero" : ""]} ${styles[size]} ${className ?? ""}`} {...rest}>
-            {children}
-        </button>
-    );
+  const buttonClasses = [
+    styles.button,
+    styles[variant],
+    styles[theme],
+    styles[size],
+    fullWidth ? styles.fullWidth : "",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  return (
+    <button className={buttonClasses} {...props}>
+      {children}
+    </button>
+  );
 };

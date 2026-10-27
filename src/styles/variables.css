@@ -2,12 +2,13 @@
   /* Primitive colors */
   --navy-900: #1b263b;
   --navy-700: #415a77;
+  --navy-500: #526f93;
 
   --sand-50: #fff5e7;
   --sand-500: #e5d3b3;
   --sand-600: #d4bd96;
 
-  --leather-700: #8C6239;
+  --leather-700: #8c6239;
 
   --white: #ffffff;
   --gray-50: #f8fafc;
@@ -24,7 +25,11 @@
   --bg-soft: var(--gray-50);
   --bg-subtle: var(--slate-50);
   --bg-dark: var(--navy-900);
-  --bg-dark-gradient: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+  --bg-dark-gradient: linear-gradient(
+    135deg,
+    var(--navy-900) 0%,
+    var(--navy-700) 100%
+  );
 
   /* Text */
   --text-main: var(--black-800);
@@ -33,23 +38,13 @@
   --text-on-dark: var(--white);
   --text-on-dark-soft: var(--slate-300);
 
-  /* Buttons and interactions */
-  /* Primary */
+  /* Actions / Interaction main colors */
   --action-primary: var(--sand-500);
   --action-primary-hover: var(--sand-600);
-  --action-primary-on-white: var(--sand-500);
-  --action-primary-on-white-hover: var(--sand-600);
-
-  /* Secondary */
-  --action-secondary: var(--leather-700);
-  --action-secondary-hover: var(--sand-600);
-  --action-secondary-on-white: var(--leather-700);
-  --action-secondary-on-white-hover: var(--sand-50);
 
   /* UI-details */
   --border-light: var(--gray-200);
   --ui-disabled: var(--gray-400);
-
 
   /* === Spacing === */
   --spacing-xs: 0.25rem;

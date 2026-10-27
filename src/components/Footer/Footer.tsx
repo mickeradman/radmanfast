@@ -1,3 +1,4 @@
+import { Mail, Phone } from "lucide-react";
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
@@ -35,14 +36,16 @@ export const Footer = () => {
               <li>
                 <a
                   href="mailto:info@radmanfast.se"
-                  className={styles.contactInfoText}
+                  className={styles.contactLink}
                 >
-                  E-post: info@radmanfast.se
+                  <Mail size={16} className={styles.contactIcon} />
+                  info@radmanfast.se
                 </a>
               </li>
               <li>
-                <a href="tel:+46767083348" className={styles.contactInfoText}>
-                  Telefon: 076-708 33 48
+                <a href="tel:+46767083348" className={styles.contactLink}>
+                  <Phone size={16} className={styles.contactIcon} />
+                  076-708 33 48
                 </a>
               </li>
             </ul>

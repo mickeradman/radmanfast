@@ -1,18 +1,12 @@
-export const openContactForm = (
-  type: 'allman' | 'offert' = 'allman',
-) => {
-  const formElement = document.getElementById(
-    'contact',
-  );
-
-  console.log('Hittade jag formuläret?', formElement);
+export const openContactForm = (type: "allman" | "offert" = "allman") => {
+  const formElement = document.getElementById("contact");
 
   if (formElement) {
-    const event = new CustomEvent('setContactIssue', {
+    const event = new CustomEvent("setContactIssue", {
       detail: type,
     });
     window.dispatchEvent(event);
-    formElement.scrollIntoView({ behavior: 'smooth' });
+    formElement.scrollIntoView({ behavior: "smooth" });
     return;
   }
 

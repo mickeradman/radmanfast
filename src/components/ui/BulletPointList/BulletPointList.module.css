@@ -1,34 +1,21 @@
 .bulletList {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm, 0.75rem);
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .bullet {
-    font-size: var(--font-size-lg);
-    line-height: 1.6;
-    margin: 0;
-    opacity: 0.95;
-    max-width: 50ch;
-    color: var(--text-on-dark-soft);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm, 0.5rem);
+  font-size: var(--font-size-md);
+  color: var(--text-on-dark-soft, #a0aec0);
 }
 
-.dark {
-    color: var(--text-main);
-}
-
-/* Tablet styles */
-@media (max-width: 1024px) {
-    .bullet {
-        font-size: var(--font-size-lg);
-        max-width: 45ch;
-        margin: 0 auto;
-    }
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    .bullet {
-        font-size: var(--font-size-md);
-        max-width: 100%;
-    }
+.checkIcon {
+  color: var(--sand-500, #e5d3b3); /* Ger den snygga sand/guld-tonen! */
+  flex-shrink: 0;
 }
